@@ -266,6 +266,7 @@ img {
             width: 90vw !important;
             font-size: 1.5em;
             padding: 0;
+            padding-top: 10px;
             border: none;
       }
 
