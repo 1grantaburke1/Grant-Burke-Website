@@ -417,6 +417,10 @@ section+section {
             justify-content: center;
       }
 
+      .contact_wrapper>p{
+            text-align: center;
+      }
+
       .cpl {
             padding: 0 !important;
       }
