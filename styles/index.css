@@ -1,0 +1,513 @@
+body {
+      margin: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+}
+
+section:nth-of-type(odd) {
+      background-color: rgb(205, 205, 205);
+}
+
+section:nth-of-type(even) {
+      background-color: rgb(173, 173, 173);
+}
+
+.light_intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+
+      background-color: rgb(179, 213, 206) !important;
+      border-top: 6px solid rgb(32, 0, 243);
+}
+
+.light_intro>div {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      width: 95%;
+
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: .9rem;
+
+      padding: 50px 0;
+}
+
+.light_intro p {
+      background-color: rgb(174, 174, 174);
+      padding: 10px;
+      font-size: 1.1em;
+}
+
+.light_intro span {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-left: 10px;
+      color: blue
+}
+
+.intro {
+      width: 60%;
+      margin-top: 0px;
+
+}
+
+.intro>p {
+      border-radius: 5px;
+      border: 1px solid black;
+}
+
+
+.img_para_wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      gap: 50px;
+}
+
+
+
+.img_para_wrapper p {
+      width: 65%;
+      word-break: keep-all;
+      border-radius: 5px;
+      margin: 5px;
+      background: linear-gradient(135deg, rgb(78, 122, 255), blue);
+      color: white;
+      border: 2px solid white;
+}
+
+.img_para_wrapper a {
+      color: rgb(201, 158, 0) !important;
+}
+
+.img_para_wrapper a:visited {
+      color: rgb(254, 254, 67) !important;
+}
+
+.img_para_wrapper p,
+.light_intro>div p {
+      box-shadow: 8px 7px 3px rgb(141, 141, 141);
+}
+
+
+.img_para_wrapper img {
+      width: 340px;
+      box-shadow: 8px 7px 3px rgb(141, 141, 141);
+      border-radius: 500px;
+      border: 2px solid white;
+      margin-left: 175px;
+}
+
+
+.skills {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      background: linear-gradient(to right, rgb(44, 44, 251), rgb(175, 175, 238), rgb(44, 44, 251));
+}
+
+.skills>div>div {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      justify-content: center;
+}
+
+.skills>div {
+      width: 70%;
+
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+      padding: 50px 0;
+}
+
+.skills h2 {
+      margin: 0;
+      margin-bottom: 20px;
+      color: white;
+}
+
+.skills h3 {
+      font-size: 1em;
+      max-width: 200px;
+      margin-top: 0;
+}
+
+.column {
+      scale: 1;
+      transition: scale .3s, background-color .3s, border .3s;
+      background-color: rgba(255, 255, 255, 0.137);
+      border-radius: 10px;
+      padding: 15px;
+      font-weight: bold;
+      color: rgb(6, 6, 6);
+      border: 2px solid transparent;
+}
+
+.column:hover {
+      scale: 1.1;
+      background-color: rgba(255, 255, 255, 0.577);
+      color: rgb(12, 0, 88);
+      border: 2px solid rgb(8, 0, 70);
+}
+
+.column li {
+      list-style-type: circle;
+      margin-top: 5px;
+      font-size: .8em;
+}
+
+.column ol {
+      margin-bottom: 0;
+}
+
+
+.education>div h2 {
+      font-size: 1.3rem;
+}
+
+.education {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+
+      background-color: rgb(179, 213, 206) !important;
+}
+
+.education>div {
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      width: 70%;
+
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+      padding: 50px 0;
+}
+
+.education>div h2 {
+      font-size: 1.3rem;
+}
+
+.education>div p {
+      font-size: .9em;
+}
+
+.cal_poly {
+      background: linear-gradient(to right, rgb(0, 0, 117), rgb(36, 135, 36));
+      padding: 15px;
+      color: white;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+}
+
+.citrus_college {
+      background: linear-gradient(to right, rgb(28, 28, 128), rgb(125, 81, 0));
+      padding: 15px;
+      color: rgb(255, 255, 255);
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+}
+
+.college_ach {
+      border-left: 2px solid black;
+      margin: 10px !important;
+      background-color: rgba(34, 255, 0, 0.483);
+      padding: 15px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+}
+
+.edu_rapper>h2 {
+      font-size: 1.5rem !important;
+      margin-top: 0;
+      margin-bottom: 15px;
+}
+
+.edu_rapper>hr {
+      margin: 0;
+      border: 2px solid rgb(0, 160, 147);
+}
+
+section+section {
+      border-top: 6px solid rgb(0, 185, 246);
+}
+
+.basic_contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+
+
+      background: linear-gradient(rgb(0, 162, 255), rgb(123, 205, 252));
+
+      color: rgb(29, 0, 92);
+}
+
+.basic_contact>div {
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      width: fit-content;
+
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      font-size: 2rem;
+
+      padding: 70px 0;
+}
+
+.contact_wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+}
+
+.contact_wrapper p {
+      text-shadow: 0px 0px 7px rgb(255, 255, 255);
+}
+
+.contact_wrapper>div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+.contact_wrapper>div>div {
+      display: inline;
+
+      font-size: .5em;
+}
+
+.contact_wrapper a:first-child {
+      display: flex;
+      text-align: center;
+      width: fit-content;
+      border-radius: 60px;
+
+      margin-bottom: 10px;
+      padding: 30px 50px;
+      border: 3px solid rgb(9, 0, 104);
+      background: linear-gradient(rgb(133, 180, 255), rgb(0, 97, 252));
+      box-shadow: 7px 5px 10px rgb(0, 62, 17);
+
+      text-shadow: none;
+
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      transition: transform .15s, box-shadow .15s, text-shadow .15s, color .15s;
+}
+
+.contact_wrapper a:first-child:hover {
+      transform: scale(1.05);
+      box-shadow: 2px 2px 100px rgb(255, 255, 255);
+      text-shadow: 4px 4px 3px rgb(9, 0, 73);
+      color: #717171;
+}
+
+.contact_wrapper a:first-child:active {
+      transform: scale(1);
+}
+
+.contact_btn {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+}
+
+.contact_btn>p {
+      display: inline;
+      margin: 0;
+      font-size: 1em;
+}
+
+@media screen and (min-width:0px) and (max-width:862px) {
+      .img_para_wrapper {
+            flex-direction: column;
+            align-items: center;
+      }
+
+      .img_para_wrapper>img {
+            width: 80vw;
+            margin-left: 0;
+      }
+
+      .img_para_wrapper span {
+            display: block;
+            font-size: 20px !important;
+      }
+
+      .img_para_wrapper p {
+            font-size: 20px !important;
+
+            width: 88%;
+      }
+
+      .skills>div>div {
+            flex-direction: column;
+      }
+
+      .skills>div {
+            width: 80vw;
+
+      }
+
+      .education>div {
+            flex-direction: column;
+            width: 80vw;
+
+      }
+
+      .cal_poly h2,
+      .citrus_college h2 {
+            width: 80vw;
+      }
+
+
+
+      .education h3 {
+            font-size: 2rem;
+      }
+
+      .cal_poly,
+      .citrus_college,
+      .education h3 {
+            padding: 10px;
+      }
+
+      .skills h2 {
+            margin: 0;
+            margin-bottom: 35px;
+            color: white;
+      }
+
+      .contact_wrapper {
+            width: 80vw;
+      }
+
+      .contact_wrapper a {
+            border-radius: 25px !important;
+      }
+
+      .basic_contact>div {
+            padding: 50px 0;
+      }
+
+      .contact_wrapper a:first-child {
+            padding: 10px 10px !important;
+      }
+
+      .contact_wrapper>div>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+      }
+
+      .cpl {
+            padding: 0 !important;
+      }
+}
+
+
+@media (prefers-color-scheme:dark) {
+      .light_intro {
+            background-color: rgb(0, 3, 16) !important;
+      }
+
+      .light_intro span {
+            color: white;
+            margin-bottom: 10px;
+      }
+
+      .skills {
+            background: linear-gradient(to right, rgb(0, 0, 78), rgb(0, 0, 168), rgb(0, 0, 78)) !important;
+            color: white;
+      }
+
+      .education {
+            background: linear-gradient(rgb(0, 16, 16) 10%, rgb(0, 33, 33)) !important;
+            color: white;
+      }
+
+      .column {
+            color: white;
+      }
+
+      .column:hover {
+            border: 2px solid rgb(192, 192, 192);
+      }
+
+
+      .basic_contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
+
+
+            background: linear-gradient(rgb(0, 53, 84), rgb(0, 138, 217));
+
+            color: rgb(187, 187, 187);
+      }
+
+      .basic_contact>div {
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+            align-items: center;
+            width: fit-content;
+
+            max-width: 85vw;
+
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+      }
+
+      .contact_wrapper p {
+            text-shadow: 0px 0px 7px rgb(0, 184, 28);
+      }
+
+      .contact_wrapper>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+      }
+
+
+      .contact_wrapper a:first-child {
+
+            text-align: center;
+            width: fit-content;
+
+
+            margin-bottom: 10px;
+            padding: 30px 50px;
+            border: 3px solid rgb(9, 0, 104);
+            background: linear-gradient(rgb(38, 121, 255), rgb(0, 67, 174));
+            box-shadow: 7px 5px 10px rgb(0, 47, 49);
+
+            text-shadow: none;
+
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: .8em;
+      }
+
+      .contact_btn:hover {
+            color: rgb(185, 185, 185) !important;
+      }
+}

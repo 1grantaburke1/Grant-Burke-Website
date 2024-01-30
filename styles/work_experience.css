@@ -1,0 +1,188 @@
+.work_experience {
+      display: block;
+
+      padding-left: 50%;
+      padding-top: 70px;
+      padding-bottom: 70px;
+}
+
+
+
+.card_container {
+
+      width: 68%;
+}
+
+.work_container {
+      width: 75%;
+      background: linear-gradient(rgb(79, 87, 245), rgb(133, 139, 254));
+      padding: 15px;
+      border-radius: 3px;
+      border: 1px solid rgb(0, 0, 139);
+}
+
+.work_container>p {
+      margin: 0;
+
+}
+
+.work_container>h3 {
+      padding-bottom: 0;
+}
+
+.card_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      /* margin-top: 10px; */
+      gap: 10%;
+      align-items: center;
+      padding: 10px;
+
+      height: 300px;
+      border-radius: 0px;
+}
+
+.card_container>div {
+      overflow: hidden;
+      border: 1px solid rgb(56, 42, 165);
+      padding: 30px;
+      border-radius: 10px;
+      width: 50%;
+      height: 260px;
+      transform: rotateZ(-5deg);
+      background-color: rgba(255, 255, 255, 0.49);
+      scale: .9;
+      transition: transform .5s, scale .5s, width .5s, border .5s;
+
+      font-size: 1.3rem;
+}
+
+.card_container>div:hover {
+      transform: rotateZ(-0deg);
+      scale: 1;
+      width: 94%;
+      border-radius: 0px;
+      border: 5px solid rgb(0, 207, 218);
+}
+
+.card_container h3 {
+      font-size: 1em;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      padding-bottom: 10px;
+}
+
+.card_container li {
+      display: list-item;
+      margin-top: 7px;
+      font-weight: bold;
+      font-size: .8em;
+      font-weight: initial;
+      list-style-type: circle !important;
+      overflow-x: initial;
+}
+
+.work_container>p {
+      margin-top: 10px;
+}
+
+.work_container>p:first-of-type {
+      margin: 35px 15px;
+}
+
+.work_container>hr:first-of-type {
+      margin-top: 5px;
+      border-bottom: 2px solid white;
+}
+
+.work_container>hr:last-of-type {
+      margin-bottom: 10px;
+}
+
+.v_w {
+      background: darkblue;
+}
+
+.v_w .voluntary_header {
+      color: rgb(114, 243, 255);
+      font-size: 2em;
+      padding-bottom: 25px;
+      text-decoration: 3px underline white;
+}
+
+.work_experience li {
+      /* list-style: initial; */
+      overflow-x: initial;
+      padding: 2px 0;
+}
+
+.v_w li:last-child {
+      padding-bottom: 8px;
+}
+
+section a {
+      color: rgb(0, 187, 255) !important;
+}
+
+section a:visited {
+      color: rgb(108, 254, 254) !important;
+}
+
+.work_container h1,
+.work_container h2,
+.work_container b {
+      color: rgb(210, 230, 247);
+}
+
+.v_w p,
+.v_w li,
+.v_w h3 {
+      color: white;
+}
+
+.v_w h1,
+.v_w h2,
+.v_w b {
+      color: rgb(95, 255, 108);
+}
+
+.v_w {
+      background: linear-gradient(rgb(22, 22, 251), rgb(84, 84, 254));
+}
+
+@media (prefers-color-scheme:dark) {
+      .work_container {
+            background: linear-gradient(rgb(0, 100, 128), rgb(0, 106, 193));
+            color: rgb(208, 208, 208);
+            border: 1px solid rgb(208, 208, 208);
+      }
+
+      .v_w {
+            background: linear-gradient(rgb(0, 0, 108), rgb(0, 0, 182));
+      }
+
+      .card_container>div {
+            background-color: rgb(44, 44, 44);
+            color: rgb(208, 208, 208);
+            border: 1px solid rgb(196, 73, 73);
+      }
+
+      .work_container h1,
+      .work_container h2,
+      .work_container b {
+            color: rgb(2, 0, 118);
+      }
+
+      .v_w h1,
+      .v_w h2,
+      .v_w b {
+            color: rgb(95, 255, 108);
+      }
+
+      .card_container>div h1,
+      .card_container>div h2,
+      .card_container>div b {
+            color: rgb(196, 73, 73);
+      }
+}

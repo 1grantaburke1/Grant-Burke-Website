@@ -1,0 +1,296 @@
+nav {
+      position: fixed;
+      justify-content: center;
+      top: 0;
+      right: 0;
+      margin: 0;
+
+      width: auto;
+      height: fit-content;
+      padding: auto;
+      background: linear-gradient(to bottom, rgb(252, 252, 252), rgb(157, 157, 157));
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      overflow: hidden;
+
+      box-sizing: border-box;
+      transition: right .6s, top .5s, width 1s;
+      z-index: 10000;
+}
+
+.logo {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      float: left;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 24pt;
+      margin: 10px;
+      margin-left: 30px;
+      font-weight: bold;
+
+      background-color: transparent;
+      padding: 0px;
+      border-radius: 20px;
+      color: rgb(0, 0, 81);
+      text-shadow: 0 0 5px rgb(120, 120, 255);
+      width: fit-content;
+      transition: all .3s;
+}
+
+
+.logo img {
+
+      align-items: center;
+      border-radius: 50px;
+      border: 2px solid rgb(3, 0, 97);
+      box-shadow: none;
+}
+
+
+.navigation {
+      padding: 12px;
+      float: right;
+      margin-top: 20px;
+      transition: margin .5s;
+}
+
+
+.navigation>li {
+      display: inline-block;
+      position: relative;
+      height: fit-content;
+
+      padding: 10px;
+      background-color: transparent;
+      color: rgb(219, 73, 73);
+      font-size: .85em;
+      font-weight: bold;
+      list-style-type: none;
+      text-decoration: none;
+      margin-right: 25px;
+      cursor: pointer;
+      z-index: 0;
+      overflow: hidden;
+      transition: color .15s, background-color .15s;
+      user-select: none;
+      transition: margin .5s;
+}
+
+.shrink_navigation {
+      margin: 0px !important;
+}
+
+.shrink_navigation:last-child {
+      margin-right: 23px !important;
+}
+
+
+
+.navigation>li:active {
+      background-color: brown;
+      color: white;
+}
+
+li:active::before {
+      opacity: 0;
+}
+
+.navigation>li {
+      padding: 0;
+}
+
+.navigation a,
+.about_db_label {
+      display: block;
+      padding: 10px !important;
+}
+
+
+
+
+.navigation>li::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: -1px;
+      background-color: rgb(236, 255, 251);
+      border-right: 2px solid rgba(0, 84, 84, 0.447);
+      width: 101%;
+      height: 100%;
+      z-index: -1;
+      transform: translateX(-100%);
+      transition: transform .35s;
+}
+
+li:hover::before {
+      transform: translateX(2px);
+}
+
+li:hover a {
+      color: rgb(0, 175, 184);
+}
+
+a {
+      text-decoration: none;
+      color: rgb(0, 50, 249);
+      text-shadow: 0 0 2px rgb(250, 246, 195);
+      transition: color .35s;
+}
+
+.navigation>li:active>a {
+      color: rgb(255, 255, 255);
+}
+
+.empty {
+      background: linear-gradient(to bottom, rgb(252, 252, 252), rgb(157, 157, 157));
+      transition: height .5s;
+}
+
+.toggle_nav {
+      position: fixed;
+      top: -80px;
+      right: 6px;
+      z-index: 10010;
+      width: 30px;
+      height: 75px;
+      padding-top: 20px;
+      border-top: none;
+      border-left: 1px solid rgb(13, 0, 255);
+      border-right: 1px solid rgb(13, 0, 255);
+      border-bottom: 1px solid rgb(13, 0, 255);
+      border-radius: 5px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      background-color: rgb(228, 228, 228);
+      color: rgb(64, 54, 255);
+      font-weight: bold;
+      cursor: pointer;
+      transition: top .15s;
+}
+
+.toggle_nav:hover {
+      background-color: rgb(196, 196, 196);
+}
+
+.toggle_nav>p {
+      display: none;
+      margin: 0;
+      font-size: 24pt !important;
+}
+
+.hamburger_btn hr {
+      margin: 2px;
+      margin-bottom: 5px;
+      padding: 0;
+      line-height: 0;
+      border: 2px solid rgb(64, 54, 255);
+      border-radius: 5px;
+      color: rgb(64, 54, 255);
+}
+
+.hamburger_btn hr:nth-of-type(3) {
+      margin-bottom: 0;
+}
+
+.navigation i {
+      transform: translate(0px, 2px);
+}
+
+@media screen and (min-width: 0px) and (max-width: 974px) {
+      .right_header {
+            display: none !important;
+      }
+
+      .left_header {
+            border-top: none !important;
+      }
+
+      .left_header::after {
+            display: none;
+      }
+
+      nav {
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+            align-items: center;
+      }
+
+      .logo {
+            /* display: block; */
+            margin: 15px;
+      }
+
+      .navigation {
+            margin: 0px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            float: initial;
+            padding: 0;
+      }
+
+
+      .navigation>li {
+            display: block;
+            margin: 0;
+            padding: 0;
+      }
+
+      .toggle_nav {
+            width: 45px;
+      }
+
+      .hamburger_btn {
+            transform: translate(0, 5px);
+      }
+}
+
+@media (prefers-color-scheme: dark) {
+      nav {
+            background: linear-gradient(to bottom, rgb(110, 109, 109), rgb(36, 36, 36));
+      }
+
+      .logo img {
+            border: 1px solid rgb(6, 0, 187);
+      }
+
+      /* .logo {
+            color: rgb(207, 87, 87);
+      }
+
+      .logo li {
+            color: rgb(226, 85, 85);
+      }
+
+      .navigation>li::before {
+            background-color: rgb(79, 79, 79);
+      }
+
+      .navigation li>a {
+            color: rgb(235, 101, 101);
+      }
+
+      .navigation li>a:hover {
+            color: rgb(209, 80, 80);
+      }*/
+
+      .navigation a {
+            color: rgb(225, 228, 255);
+      }
+
+      .empty {
+            background: linear-gradient(to bottom, rgb(85, 85, 85), rgb(72, 72, 72));
+      }
+
+      .toggle_nav {
+            background: linear-gradient(rgb(70, 70, 70), rgb(29, 29, 29));
+            border: 1px solid rgb(199, 199, 255);
+      }
+
+      .toggle_nav:hover {
+            background: rgb(28, 28, 28)
+      }
+}

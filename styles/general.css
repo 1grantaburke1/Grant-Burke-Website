@@ -1,0 +1,124 @@
+* {
+      overflow-x: hidden;
+      margin: 0;
+}
+
+
+
+section {
+      display: flex;
+      align-items: center;
+
+      padding-left: 50vw;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      width: 100vw;
+      height: fit-content;
+      margin: 0;
+
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      z-index: 0;
+}
+
+section:nth-of-type(odd) {
+      background-color: rgb(201, 209, 255);
+}
+
+section:nth-of-type(even) {
+      background-color: rgb(143, 160, 255);
+}
+
+section>div {
+      transform: translateX(-50%);
+}
+
+h3 {
+      padding-bottom: 20px;
+}
+
+h2 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: rgb(24, 0, 142);
+}
+
+h1 {
+      font-size: 26pt;
+      font-weight: bold;
+      color: rgb(0, 0, 60);
+}
+
+.general_intro {
+      display: flex;
+      flex-direction: column;
+
+      gap: 30px;
+      padding-left: 0px;
+      text-align: center;
+}
+
+p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16pt;
+      margin: 0 150px;
+}
+
+b {
+      color: rgb(0, 80, 38);
+}
+
+.header {
+      padding-top: 20px;
+      background: linear-gradient(rgb(65, 65, 65), rgb(201, 209, 255));
+}
+
+.header>h1 {
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 15px;
+}
+
+.header>hr {
+      margin: 0 13%;
+      border: 1px solid;
+      border-color: rgb(33, 0, 125);
+}
+
+section+section,
+section:first-child {
+      border-top: 4px solid rgb(75, 87, 255);
+}
+
+@media (prefers-color-scheme: dark) {
+      section:nth-of-type(odd) {
+            background-color: rgb(24, 24, 24);
+      }
+
+      section:nth-of-type(even) {
+            background-color: rgb(46, 46, 46);
+      }
+
+      .header {
+            background: linear-gradient(rgb(83, 83, 83), rgb(24, 24, 24));
+            color: rgb(208, 208, 208);
+      }
+
+      .header hr {
+            border-color: rgb(7, 145, 170);
+      }
+
+      section+section {
+            border-top: 4px solid rgb(99, 85, 253);
+      }
+
+      h1 {
+            color: rgb(159, 159, 255);
+      }
+}
+
+@media screen and (max-width: 980px) {
+      .header>hr {
+            margin: 0 30px;
+      }
+}
