@@ -143,7 +143,7 @@ function ShrinkNavBar() {
 
         navContainer.style.display = "flex";
         navContainer.style.flexDirection = "column";
-        //navContainer.style.marginRight = "100px";
+        navContainer.style.marginRight = "100px";
         navBar.style.alignItems = "start";
         navBar.style.borderBottomLeftRadius = "5px";
     }
@@ -178,6 +178,7 @@ function GrowNavBar() {
     if (window.innerWidth > 974) {
         navContainer.style.marginTop = "20px";
     } else {
+        navContainer.style.marginRight = "0px";
         navContainer.style.marginTop = "0px";
     }
 }
