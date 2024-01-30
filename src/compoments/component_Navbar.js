@@ -9,7 +9,8 @@ let navbarToggle = document.querySelector(".toggle_nav");
 let toggleArrowIcon = document.querySelector(".toggle_nav > p");
 let toggleHamburgerIcon = document.querySelector(".hamburger_btn");
 
-if (window.innerWidth < 974) {
+// Determine navbarToggle btn's icon based on width
+if (window.innerWidth <= 974) {
     toggleArrowIcon.style.display = "none";
     toggleHamburgerIcon.style.display = "block";
 } else {
@@ -19,58 +20,108 @@ if (window.innerWidth < 974) {
 
 //Empty space at the top of screen.
 let emptySpace = document.querySelector(".empty");
-
 let startingNavHeight = navBar.offsetHeight;
 
-setTimeout(() => {
-    startingNavHeight = navBar.offsetHeight;
-    emptySpace.style.height = startingNavHeight + "px";
-}, 10);
+// setTimeout(() => {
+//     startingNavHeight = navBar.offsetHeight;
+//     emptySpace.style.height = startingNavHeight + "px";
+// }, 10);
 emptySpace.style.height = startingNavHeight + "px";
 navBar.style.width = "100vw";
 
 let toggleShown = false;
 let navbarDown = true;
+let belowMark = false;
 window.addEventListener("scroll", () => {
+    // Mobile Widths
+    if (this.innerWidth <= 974) {
+        // Exiting Empty space
+        if (this.scrollY > 40) {
+            ShrinkNavBar();
+        } else if (this.scrollY == 0) {
+            GrowNavBar();
+        }
+
+        if (this.scrollY <= startingNavHeight - 10) {
+            belowMark = false;
+            navbarToggle.style.top = "-80px";
+        }
+
+        if (this.scrollY > startingNavHeight - 10) {
+            if (belowMark == false) {
+                HideNavBar();
+                navbarDown = false;
+            }
+
+            belowMark = true;
+            navbarToggle.style.top = "-20px";
+        }
+
+        // Entering Empty space
+        if (this.scrollY < startingNavHeight - 75) {
+            ShowNavBar();
+            navbarDown = true;
+        }
+
+        if (this.scrollY < 50) {
+            GrowNavBar();
+        }
+
+        return;
+    }
+
+    //Desktop Widths
     if (this.scrollY > 0) {
         emptySpace.style.height = "0px";
     }
 
     if (this.scrollY == 0) {
-        logo.style.display = "flex";
-
-        navBar.style.width = "100vw";
-
-        navBar.style.border = "none";
-
-        if (navbarDown == false) {
-            navBar.style.top = "-300px";
-            emptySpace.style.height = "0px";
-        } else if (navbarDown == true) {
-            emptySpace.style.height = startingNavHeight + "px";
-        }
-
-        navBar.style.alignItems = "center";
-
-        if (window.innerWidth > 974) {
-            navContainer.style.marginTop = "20px";
-        } else {
-            navBar.style.alignItems = "center";
-            navContainer.style.marginTop = "0px";
-        }
-        toggleShown = false;
-
-        navBar.style.width = "100vw";
-        navBar.style.borderBottomLeftRadius = "0px";
-        navContainer.style.marginBottom = "10px";
-        navContainer.classList.remove("float_left");
-
-        links.forEach((link) => {
-            link.classList.remove("shrink_navigation");
-        });
+        GrowNavBar();
         return;
     }
 
+    ShrinkNavBar();
+});
+
+navbarToggle.addEventListener("click", () => {
+    if (navbarDown == true) {
+        if (this.innerWidth > 974) {
+            emptySpace.style.height = "0px";
+        }
+
+        HideNavBar();
+
+        navbarToggle.style.top = "-35px";
+        setTimeout(() => {
+            navbarToggle.style.top = "-20px";
+
+            toggleArrowIcon.textContent = "\u2193";
+        }, 150);
+        navbarDown = false;
+        return;
+    }
+
+    if (this.innerWidth > 974) {
+        emptySpace.style.height = startingNavHeight + "px";
+    }
+    ShowNavBar();
+
+    if (window.scrollY == 0) {
+        navbarToggle.style.top = "-80px";
+        toggleArrowIcon.textContent = "\u2191";
+        navbarDown = true;
+        return;
+    }
+
+    navbarToggle.style.top = "-1px";
+    setTimeout(() => {
+        navbarToggle.style.top = "-20px";
+        toggleArrowIcon.textContent = "\u2191";
+    }, 150);
+    navbarDown = true;
+});
+
+function ShrinkNavBar() {
     if (toggleShown == false) {
         navbarToggle.style.top = "-20px";
         toggleShown = true;
@@ -108,37 +159,33 @@ window.addEventListener("scroll", () => {
         navBar.style.borderBottom = "1px solid black";
     }
     navContainer.classList.add("float_left");
-});
+}
 
-navbarToggle.addEventListener("click", () => {
-    if (navbarDown == true) {
-        emptySpace.style.height = "0px";
-        navBar.style.top = "-300px";
+function GrowNavBar() {
+    logo.style.display = "flex";
+    navBar.style.width = "100vw";
+    navBar.style.border = "none";
+    navBar.style.alignItems = "center";
+    navBar.style.borderBottomLeftRadius = "0px";
+    navContainer.style.marginBottom = "10px";
+    navContainer.classList.remove("float_left");
+    toggleShown = false;
 
-        navbarToggle.style.top = "-35px";
-        setTimeout(() => {
-            navbarToggle.style.top = "-20px";
+    links.forEach((link) => {
+        link.classList.remove("shrink_navigation");
+    });
 
-            toggleArrowIcon.textContent = "\u2193";
-        }, 150);
-        navbarDown = false;
-        return;
+    if (window.innerWidth > 974) {
+        navContainer.style.marginTop = "20px";
+    } else {
+        navContainer.style.marginTop = "0px";
     }
+}
 
-    emptySpace.style.height = startingNavHeight + "px";
+function ShowNavBar() {
     navBar.style.top = "0px";
+}
 
-    if (window.scrollY == 0) {
-        navbarToggle.style.top = "-80px";
-        toggleArrowIcon.textContent = "\u2191";
-        navbarDown = true;
-        return;
-    }
-
-    navbarToggle.style.top = "-1px";
-    setTimeout(() => {
-        navbarToggle.style.top = "-20px";
-        toggleArrowIcon.textContent = "\u2191";
-    }, 150);
-    navbarDown = true;
-});
+function HideNavBar() {
+    navBar.style.top = "-300px";
+}
