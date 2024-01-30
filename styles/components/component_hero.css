@@ -116,10 +116,15 @@
       width: 50vw;
       height: 100%;
       padding: 0;
-      background-image: url("assets/images/hero_background.png");
+/*       background-image: url("assets/images/hero_background.png");
       background-size: cover;
-      background-repeat: no-repeat;
+      background-repeat: no-repeat; */
       opacity: .8;
+}
+
+.right_header>img {
+      width: 100%;
+      height: 100%;
 }
 
 @media screen and (min-width: 0px) and (max-width: 1300px) {
