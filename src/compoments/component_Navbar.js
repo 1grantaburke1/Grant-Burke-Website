@@ -143,7 +143,7 @@ function ShrinkNavBar() {
 
         navContainer.style.display = "flex";
         navContainer.style.flexDirection = "column";
-        navContainer.style.marginRight = "100px";
+        //navContainer.style.marginRight = "100px";
         navBar.style.alignItems = "start";
         navBar.style.borderBottomLeftRadius = "5px";
     }
