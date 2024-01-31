@@ -247,7 +247,7 @@ img {
 @media screen and (min-width: 0px) and (max-width: 975px) {
 
       .hymn_container,
-      .albertsons_container,
+      .register_container,
       .RBC_container {
             flex-direction: column-reverse;
             gap: 20px;
