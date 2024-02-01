@@ -92,6 +92,16 @@ section img {
       width: 360px;
 }
 
+.Grant_Burke_LinkedIn_Page>.LinkedIn_Icon {
+      height: 70px !important;
+      filter: brightness(0) invert(1) !important;
+}
+
+.Grant_Burke_LinkedIn_Page>p {
+      margin-left: 0;
+      font-size: 20pt;
+}
+
 @media screen and (min-width: 0px) and (max-width: 826px) {
       section>div>div {
             display: flex;
