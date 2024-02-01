@@ -162,6 +162,11 @@ function ShrinkNavBar() {
 }
 
 function GrowNavBar() {
+    if (navbarDown == true) {
+        emptySpace.style.height = startingNavHeight + "px";
+        navbarToggle.style.top = "-80px";
+    }
+    
     logo.style.display = "flex";
     navBar.style.width = "100vw";
     navBar.style.border = "none";
