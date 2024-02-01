@@ -48,7 +48,7 @@ section>div>div {
 
       display: block;
       text-align: center;
-      background: linear-gradient(to bottom, rgb(56, 56, 252), rgb(0, 0, 67));
+      background: linear-gradient(to bottom, rgb(233, 233, 255), rgb(193, 193, 255));
       color: white;
       border: 1px solid white;
       border-radius: 5px;
@@ -65,7 +65,7 @@ section>div>div {
 }
 
 .general>a:nth-of-type(1) {
-      background: linear-gradient(to bottom, rgb(255, 159, 159), rgb(111, 0, 0));
+      background: linear-gradient(to bottom, rgb(255, 254, 196), rgb(246, 252, 132));
       margin-top: 30px;
       margin-bottom: 12px;
 }
@@ -94,7 +94,6 @@ section img {
 
 .Grant_Burke_LinkedIn_Page>.LinkedIn_Icon {
       height: 70px !important;
-      filter: brightness(0) invert(1) !important;
 }
 
 .Grant_Burke_LinkedIn_Page>p {
