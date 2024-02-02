@@ -138,6 +138,17 @@ section img {
       }
 }
 
+@media screen and (max-width: 530px) {
+      .Grant_Burke_LinkedIn_Page>.LinkedIn_Icon {
+            transform: translateX(6px) !important;
+      }
+
+      .general a {
+            display: flex;
+            flex-direction: column;
+      }
+}
+
 span {
       line-height: 22pt;
       font-family: Arial, Helvetica, sans-serif;
