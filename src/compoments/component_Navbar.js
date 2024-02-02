@@ -36,22 +36,22 @@ window.addEventListener("scroll", () => {
     // Mobile Widths
     if (this.innerWidth <= 974) {
         // Exiting Empty space
-       if (this.scrollY > 70) {
+       if (this.scrollY > 60) {
             ShrinkNavBar();
-        } else if (this.scrollY <= 70) {
+        } else if (this.scrollY <= 60) {
             GrowNavBar();
         }
 
-        if ((this.scrollY > 70) & (this.scrollY <= startingNavHeight - 20)) {
+        if ((this.scrollY > 60) & (this.scrollY <= startingNavHeight - 70)) {
             navBar.style.width = "100%";
         }
 
-        if (this.scrollY <= startingNavHeight - 20) {
+        if (this.scrollY <= startingNavHeight - 70) {
             belowMark = false;
             navbarToggle.style.top = "-80px";
         }
 
-        if (this.scrollY > startingNavHeight - 20) {
+        if (this.scrollY > startingNavHeight - 70) {
             if (belowMark == false) {
                 HideNavBar();
                 navbarDown = false;
