@@ -140,7 +140,7 @@ section img {
 
 @media screen and (max-width: 530px) {
       .Grant_Burke_LinkedIn_Page>.LinkedIn_Icon {
-            transform: translateX(6px) !important;
+            transform: translateX(7px) !important;
       }
 
       .general a {
