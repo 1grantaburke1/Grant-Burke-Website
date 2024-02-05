@@ -107,6 +107,14 @@ section img {
             text-wrap: wrap;
       }
 
+      .general_information a {
+            width: 90% !important;
+            word-wrap: break-word;
+            font-weight: bold;
+            background-color: transparent;
+            box-shadow: none;
+      }
+
       section>div>div {
             display: flex;
             flex-direction: column;
@@ -200,10 +208,6 @@ b {
       img {
             box-shadow: 9px 5px 2px rgb(23, 23, 23);
             border: 1px solid rgb(137, 137, 137);
-      }
-
-      .general a {
-            box-shadow: 9px 5px 2px rgb(23, 23, 23);
       }
 
       .general_information {
