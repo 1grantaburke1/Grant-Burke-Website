@@ -118,7 +118,7 @@ section img {
       section>div {
             flex-direction: column;
             transform: translateX(-50%);
-            width: 80vw;
+            width: 80vw !important;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
             border-bottom: none !important;
