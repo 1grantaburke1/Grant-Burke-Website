@@ -85,7 +85,7 @@ h3 {
 
 h2 {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      color: rgb(7, 0, 214);
+      color: rgb(5, 0, 147);
 }
 
 section img {
@@ -121,6 +121,7 @@ section img {
             width: 90vw;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
+            border-bottom: none !important;
       }
 
       section {
@@ -186,7 +187,7 @@ b {
 
 @media (prefers-color-scheme:dark) {
       section>div {
-            background: linear-gradient(rgb(3, 29, 197), rgb(0, 13, 93));
+            background: linear-gradient(rgb(60, 86, 255), rgb(0, 34, 255));
             border: 1px solid rgb(217, 216, 216);
       }
 
