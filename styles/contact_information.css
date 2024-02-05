@@ -101,18 +101,18 @@ section img {
       font-size: 20pt;
 }
 
+.general_information a {
+      width: 90% !important;
+      word-wrap: break-word;
+      background-color: transparent;
+      box-shadow: none;
+      text-shadow: none;
+}
+
 @media screen and (min-width: 0px) and (max-width: 826px) {
       .general_information {
             width: 86%;
             text-wrap: wrap;
-      }
-
-      .general_information a {
-            width: 90% !important;
-            word-wrap: break-word;
-            font-weight: bold;
-            background-color: transparent;
-            box-shadow: none;
       }
 
       section>div>div {
