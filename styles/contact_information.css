@@ -102,6 +102,11 @@ section img {
 }
 
 @media screen and (min-width: 0px) and (max-width: 826px) {
+      .general_information {
+            width: 90%;
+            margin-right: 7px;
+      }
+      
       section>div>div {
             display: flex;
             flex-direction: column;
@@ -118,7 +123,7 @@ section img {
       section>div {
             flex-direction: column;
             transform: translateX(-50%);
-            width: 80vw !important;
+            width: 82vw !important;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
             border-bottom: none !important;
