@@ -190,9 +190,6 @@ function GrowNavBar() {
 
     if (window.innerWidth > 974) {
         navContainer.style.marginTop = "20px";
-    } else {
-        navContainer.style.marginRight = "0px";
-        navContainer.style.marginTop = "0px";
     }
 }
 
