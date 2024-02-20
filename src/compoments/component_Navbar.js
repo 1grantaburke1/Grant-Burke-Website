@@ -44,6 +44,8 @@ window.addEventListener("scroll", () => {
 
         if ((this.scrollY > 60) & (this.scrollY <= startingNavHeight - 70)) {
             navBar.style.width = "100%";
+            navContainer.style.flexDirection = "row";
+            navContainer.style.flexWrap = "wrap";
         }
 
         if (this.scrollY <= startingNavHeight - 70) {
