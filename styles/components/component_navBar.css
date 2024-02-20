@@ -229,7 +229,7 @@ a {
       }
 
       .navigation {
-            margin: 10px 5px !important;
+            margin: 10px 5px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
