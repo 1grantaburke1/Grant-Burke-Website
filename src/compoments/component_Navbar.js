@@ -177,6 +177,8 @@ function GrowNavBar() {
     navBar.style.alignItems = "center";
     navBar.style.borderBottomLeftRadius = "0px";
     navContainer.style.marginBottom = "10px";
+    navContainer.style.flexDirection = "row";
+    navContainer.style.flexWrap = "wrap";
     navContainer.classList.remove("float_left");
     toggleShown = false;
 
