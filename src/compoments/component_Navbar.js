@@ -26,7 +26,7 @@ let startingNavHeight = navBar.offsetHeight;
 //     startingNavHeight = navBar.offsetHeight;
 //     emptySpace.style.height = startingNavHeight + "px";
 // }, 10);
-emptySpace.style.height = startingNavHeight + "px";
+emptySpace.style.height = startingNavHeight - 10 + "px";
 navBar.style.width = "100vw";
 
 let toggleShown = false;
@@ -106,7 +106,7 @@ navbarToggle.addEventListener("click", () => {
     }
 
     if (this.innerWidth > 974) {
-        emptySpace.style.height = startingNavHeight + "px";
+        emptySpace.style.height = startingNavHeight - 10 + "px";
     }
     ShowNavBar();
 
@@ -167,7 +167,7 @@ function ShrinkNavBar() {
 
 function GrowNavBar() {
     if (navbarDown == true) {
-        emptySpace.style.height = startingNavHeight + "px";
+        emptySpace.style.height = startingNavHeight - 10 + "px";
         navbarToggle.style.top = "-80px";
     }
     
@@ -176,7 +176,7 @@ function GrowNavBar() {
     navBar.style.border = "none";
     navBar.style.alignItems = "center";
     navBar.style.borderBottomLeftRadius = "0px";
-    navContainer.style.marginBottom = "10px";
+    navContainer.style.margin = "10px 5px";
     navContainer.style.flexDirection = "row";
     navContainer.style.flexWrap = "wrap";
     navContainer.classList.remove("float_left");
