@@ -201,7 +201,7 @@ b {
 
 @media (prefers-color-scheme:dark) {
       section>div {
-            background: linear-gradient(rgb(60, 86, 255), rgb(0, 34, 255));
+            background: linear-gradient(rgb(25, 47, 189), rgb(2, 11, 74));
             border: 1px solid rgb(217, 216, 216);
       }
 
