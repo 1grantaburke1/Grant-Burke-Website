@@ -134,7 +134,7 @@ li:hover a {
 
 a {
       text-decoration: none;
-      color: rgb(0, 50, 249);
+      color: rgb(0, 23, 113);
       text-shadow: 0 0 2px rgb(250, 246, 195);
       transition: color .35s;
 }
