@@ -1,3 +1,7 @@
+:root {
+      --basic-reference-width: 42%;
+}
+
 body {
       margin: 0;
       box-sizing: border-box;
@@ -103,22 +107,63 @@ section:nth-of-type(even) {
 }
 
 
-.skills {
+.skills,
+.references {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100vw;
+}
+
+.skills {
       background: linear-gradient(to right, rgb(44, 44, 251), rgb(179, 179, 179), rgb(44, 44, 251));
 }
 
-.skills>div>div {
+.skills h2 {
+      color: white;
+}
+
+.references {
+      background: linear-gradient(to right, rgb(250, 191, 73), rgb(246, 193, 96), rgb(250, 191, 73));
+}
+
+.references>div>div {
+      flex-basis: 50%;
+      flex-grow: 1;
+      flex-wrap: wrap;
+      gap: 25px !important;
+}
+
+.references .column * {
+      margin: 10px 5px;
+}
+
+.references a {
+      color: rgb(80, 188, 255);
+      text-shadow: none;
+      text-decoration: underline;
+}
+
+.references .column:hover {
+      background-color: rgba(255, 255, 255, 0.577);
+}
+
+.references .column {
+      width: calc(var(--basic-reference-width));
+}
+
+.references .column:last-child {
+      width: calc(2 * var(--basic-reference-width) + 60px);
+}
+
+.token_set>div>div {
       display: flex;
       flex-direction: row;
       gap: 50px;
       justify-content: center;
 }
 
-.skills>div {
+.token_set>div {
       width: 70%;
 
       font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -126,13 +171,12 @@ section:nth-of-type(even) {
       padding: 50px 0;
 }
 
-.skills h2 {
+.token_set h2 {
       margin: 0;
       margin-bottom: 20px;
-      color: white;
 }
 
-.skills h3 {
+.token_set h3 {
       font-size: 1em;
       max-width: 200px;
       margin-top: 0;
@@ -356,13 +400,12 @@ section+section {
             width: 88%;
       }
 
-      .skills>div>div {
+      .token_set>div>div {
             flex-direction: column;
       }
 
-      .skills>div {
+      .token_set>div {
             width: 80vw;
-
       }
 
       .education>div {
@@ -375,8 +418,6 @@ section+section {
       .citrus_college h2 {
             width: 80vw;
       }
-
-
 
       .education h3 {
             font-size: 2rem;
@@ -424,6 +465,21 @@ section+section {
       .cpl {
             padding: 0 !important;
       }
+
+      .references * {
+            flex-wrap: nowrap !important;
+            text-wrap: wrap !important;
+            margin: 10px 0px;
+
+      }
+
+      .references a {
+            word-wrap: break-word;
+      }
+
+      .references.token_set .column {
+            width: initial;
+      }
 }
 
 
@@ -437,9 +493,21 @@ section+section {
             margin-bottom: 10px;
       }
 
+      .skills,
+      .references {
+            color: white;
+      }
+
       .skills {
             background: linear-gradient(to right, rgb(0, 0, 78), rgb(0, 0, 168), rgb(0, 0, 78)) !important;
-            color: white;
+      }
+
+      .references {
+            background: linear-gradient(rgb(45, 35, 0), rgb(54, 43, 0)) !important;
+      }
+
+      .references .column:hover {
+            background-color: rgba(197, 197, 197, 0.243);
       }
 
       .education {
