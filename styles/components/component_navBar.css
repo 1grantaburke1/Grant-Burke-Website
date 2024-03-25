@@ -31,20 +31,28 @@ nav {
 
       background-color: transparent;
       padding: 0px;
-      border-radius: 20px;
+      padding-right: 10px;
+      border-radius: 10px;
+      border-top-left-radius: 25%;
+      border-bottom-left-radius: 25%;
       color: rgb(0, 0, 81);
       text-shadow: 0 0 5px rgb(120, 120, 255);
       width: fit-content;
       transition: all .3s;
 }
 
+.logo:hover {
+      background-color: rgba(0, 34, 255, 0.121);
+}
+
+.logo:active {
+      background-color: rgba(195, 206, 255, 0.807)
+}
 
 .logo img {
-
       align-items: center;
-      border-radius: 50px;
-      border: 2px solid rgb(3, 0, 97);
-      box-shadow: none;
+      border-radius: 25%;
+      box-shadow: 6px 3px 2px rgba(37, 37, 37, 0.401);
 }
 
 
@@ -85,8 +93,6 @@ nav {
       margin-right: 23px !important;
 }
 
-
-
 .navigation>li:active {
       background-color: brown;
       color: white;
@@ -105,10 +111,6 @@ li:active::before {
       display: block;
       padding: 10px !important;
 }
-
-
-
-
 .navigation>li::before {
       content: '';
 
@@ -226,6 +228,7 @@ a {
       .logo {
             /* display: block; */
             margin: 15px;
+            border-radius: 0px;
       }
 
       .navigation {
@@ -242,6 +245,10 @@ a {
             display: block;
             margin: 0;
             padding: 0;
+      }
+
+      .navigation>li::before {
+            transition: none;
       }
 
       .toggle_nav {
