@@ -9,6 +9,9 @@ let navbarToggle = document.querySelector(".toggle_nav");
 let toggleArrowIcon = document.querySelector(".toggle_nav > p");
 let toggleHamburgerIcon = document.querySelector(".hamburger_btn");
 
+let logoImg = document.querySelector("nav img");
+logoImg.setAttribute("src", "./assets/images/GB_blue_logo.jpg");
+
 // Determine navbarToggle btn's icon based on width
 if (window.innerWidth <= 974) {
     toggleArrowIcon.style.display = "none";
