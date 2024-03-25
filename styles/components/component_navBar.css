@@ -30,6 +30,7 @@ nav {
       font-weight: bold;
 
       background-color: transparent;
+      overflow: visible;
       padding: 0px;
       padding-right: 10px;
       border-radius: 10px;
@@ -53,6 +54,7 @@ nav {
       align-items: center;
       border-radius: 25%;
       box-shadow: 6px 3px 2px rgba(37, 37, 37, 0.401);
+      border:none;
 }
 
 
