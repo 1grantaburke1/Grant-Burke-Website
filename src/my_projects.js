@@ -7,6 +7,9 @@ let hrMarker = RBCSection.querySelector(".information hr");
 
 let removableParas = RBCSection.querySelectorAll(".information .removable");
 
+let logoImg = document.querySelector("nav img");
+logoImg.setAttribute("src", "/assets/GB_blue_logo.jpg");
+
 if (window.innerWidth <= 980) {
     RBCHeader.style.textDecoration = "none";
     RBCHeader.style.pointerEvents = "none";
