@@ -265,10 +265,6 @@ a {
             background: linear-gradient(to bottom, rgb(110, 109, 109), rgb(36, 36, 36));
       }
 
-      .logo img {
-            border: 1px solid rgb(6, 0, 187);
-      }
-
       /* .logo {
             color: rgb(207, 87, 87);
       }
