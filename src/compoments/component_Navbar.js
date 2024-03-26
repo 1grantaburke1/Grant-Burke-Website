@@ -40,8 +40,10 @@ window.addEventListener("scroll", () => {
     if (this.innerWidth <= 974) {
         // Exiting Empty space
        if (this.scrollY > 60) {
+           navContainer.style.justifyContent = "initial";
             ShrinkNavBar();
         } else if (this.scrollY <= 60) {
+           navContainer.style.justifyContent = "center";
             GrowNavBar();
         }
 
