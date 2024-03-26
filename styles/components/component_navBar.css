@@ -20,7 +20,7 @@ nav {
 .logo {
       display: flex;
       flex-direction: row;
-      gap: 10px;
+      gap: 15px;
       align-items: center;
       float: left;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
