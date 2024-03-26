@@ -63,6 +63,7 @@ nav {
       float: right;
       margin-top: 20px;
       transition: margin .5s;
+      justify-content: center;
 }
 
 
