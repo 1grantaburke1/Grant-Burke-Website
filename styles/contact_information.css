@@ -10,7 +10,7 @@ img {
 section>div {
       display: flex;
       background: linear-gradient(rgb(78, 101, 253), rgb(0, 34, 255));
-      border-radius: 15px;
+      border-radius: 8px;
       align-items: center;
       gap: 0px;
       text-align: center;
@@ -25,6 +25,10 @@ section>div>div {
       text-align: initial;
 
       padding: 15px;
+}
+
+.contact_body {
+      padding-top: 30px;
 }
 
 .general_information {
@@ -202,7 +206,6 @@ b {
 @media (prefers-color-scheme:dark) {
       section>div {
             background: linear-gradient(rgb(25, 47, 189), rgb(2, 11, 74));
-            border: 1px solid rgb(217, 216, 216);
       }
 
       img {
