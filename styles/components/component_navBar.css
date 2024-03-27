@@ -39,7 +39,7 @@ nav {
       color: rgb(0, 0, 81);
       text-shadow: 0 0 5px rgb(120, 120, 255);
       width: fit-content;
-      transition: all .3s;
+      transition: background-color 0.3s;
 }
 
 .logo:hover {
@@ -232,6 +232,7 @@ a {
             /* display: block; */
             margin: 15px;
             border-radius: 0px;
+            transition: initial;
       }
 
       .navigation {
