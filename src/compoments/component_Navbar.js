@@ -23,11 +23,11 @@ if (window.innerWidth <= 974) {
 
 //Empty space at the top of screen.
 let emptySpace = document.querySelector(".empty");
-// let startingNavHeight = navBar.offsetHeight;
+let startingNavHeight = navBar.offsetHeight;
 // emptySpace.style.height = startingNavHeight + 10 + "px";
 
 setTimeout(() => {
-    let startingNavHeight = navBar.offsetHeight;
+    startingNavHeight = navBar.offsetHeight;
     emptySpace.style.height = startingNavHeight - 10 + "px";
 }, 100);
 
