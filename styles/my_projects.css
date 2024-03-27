@@ -62,7 +62,7 @@ video {
 img {
       border-radius: 10px;
       border: 1px solid white;
-      transition: all .1s;
+      transition: scale .1s, optacity .1s, border .1s;
       box-sizing: border-box;
 }
 
