@@ -29,7 +29,7 @@ let startingNavHeight = navBar.offsetHeight;
 setTimeout(() => {
     startingNavHeight = navBar.offsetHeight;
     emptySpace.style.height = startingNavHeight - 10 + "px";
-}, 100);
+}, 200);
 
 navBar.style.width = "100vw";
 
