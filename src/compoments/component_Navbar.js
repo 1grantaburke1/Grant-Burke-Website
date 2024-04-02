@@ -114,7 +114,7 @@ navbarToggle.addEventListener("click", () => {
     }
 
     if (this.innerWidth > 974) {
-        emptySpace.style.height = startingNavHeight - 10 + "px";
+        emptySpace.style.height = startingNavHeight + "px";
     }
     ShowNavBar();
 
@@ -175,7 +175,7 @@ function ShrinkNavBar() {
 
 function GrowNavBar() {
     if (navbarDown == true) {
-        emptySpace.style.height = startingNavHeight - 10 + "px";
+        emptySpace.style.height = startingNavHeight + "px";
         navbarToggle.style.top = "-80px";
     }
     
