@@ -116,7 +116,7 @@ section:nth-of-type(even) {
 }
 
 .skills {
-      background: linear-gradient(to right, rgb(44, 44, 251), rgb(179, 179, 179), rgb(44, 44, 251));
+      background: linear-gradient(to right, rgb(44, 44, 251), rgb(0, 0, 191), rgb(44, 44, 251));
 }
 
 .skills h2 {
@@ -149,6 +149,7 @@ section:nth-of-type(even) {
 }
 
 .references .column {
+      background-color: rgba(255, 255, 255, .35);
       width: calc(var(--basic-reference-width));
 }
 
@@ -523,7 +524,10 @@ section+section {
             border: 2px solid rgb(192, 192, 192);
       }
 
-
+      .column:hover h5 {
+            color: rgb(152, 152, 255);
+      }
+      
       .basic_contact {
             display: flex;
             flex-direction: column;
