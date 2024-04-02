@@ -8,13 +8,21 @@ nav {
       width: auto;
       height: fit-content;
       padding: auto;
-      background: linear-gradient(to bottom, rgb(252, 252, 252), rgb(157, 157, 157));
+/*       background: linear-gradient(to bottom, rgb(252, 252, 252), rgb(157, 157, 157)); */
+      background: linear-gradient(to bottom, rgba(0, 0, 236, 0.8), rgb(3, 0, 181));
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       overflow: hidden;
+
+      border: none !important;
+      box-shadow: 0 0 15px white;
 
       box-sizing: border-box;
       transition: right .6s, top .5s, width 1s;
       z-index: 10000;
+}
+
+.navbar * {
+      color: rgb(230, 230, 230) !important;
 }
 
 .logo {
@@ -135,6 +143,10 @@ li:hover::before {
 
 li:hover a {
       color: rgb(0, 175, 184);
+}
+
+li:hover :is(a, i) {
+      color: rgb(4, 0, 255) !important;
 }
 
 a {
@@ -271,6 +283,10 @@ a {
 
       .logo {
             color: rgb(221, 249, 255);
+      }
+
+      .logo:hover {
+            background-color: rgba(0, 34, 255, 0.121);
       }
 
       /*.logo li {
