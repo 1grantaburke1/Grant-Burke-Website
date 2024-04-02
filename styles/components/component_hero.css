@@ -192,6 +192,9 @@
             color: rgb(3, 0, 40);
             text-shadow: none !important;
             margin-top: 0;
+      }
+
+      .left_header li {
             font-size: 18pt;
       }
 
