@@ -35,49 +35,67 @@ navBar.style.width = "100vw";
 
 let toggleShown = false;
 let navbarDown = true;
-let belowMark = false;
+// let belowMark = false;
+let atTop = true;
 window.addEventListener("scroll", () => {
     // Mobile Widths
     if (this.innerWidth <= 974) {
-        // Exiting Empty space
-       if (this.scrollY > 60) {
-           navContainer.style.justifyContent = "initial";
+        //new way
+        if (this.scrollY > 0 && atTop == true) {
+            navContainer.style.justifyContent = "initial";
+            // emptySpace.style.height = "0px";
             ShrinkNavBar();
-        } else if (this.scrollY <= 60) {
-           navContainer.style.justifyContent = "center";
-            GrowNavBar();
+            HideNavBar();
+            emptySpace.style.height = "0px";
+            atTop = false;
+            navbarDown = false;
+            this.scrollY(0);
         }
 
-        if ((this.scrollY > 60) & (this.scrollY <= startingNavHeight - 70)) {
-            navBar.style.width = "100%";
-            navContainer.style.flexDirection = "row";
-            navContainer.style.flexWrap = "wrap";
-        }
-
-        if (this.scrollY <= startingNavHeight - 70) {
-            belowMark = false;
-            navbarToggle.style.top = "-80px";
-        }
-
-        if (this.scrollY > startingNavHeight - 70) {
-            if (belowMark == false) {
-                HideNavBar();
-                navbarDown = false;
-            }
-
-            belowMark = true;
+        if ((emptySpace.style.height = "0px")) {
             navbarToggle.style.top = "-20px";
         }
 
-        // Entering Empty space
-        if (this.scrollY < startingNavHeight - 75) {
-            ShowNavBar();
-            navbarDown = true;
-        }
+        //old way
+        // Exiting Empty space
+       // if (this.scrollY > 60) {
+       //     navContainer.style.justifyContent = "initial";
+       //      ShrinkNavBar();
+       //  } else if (this.scrollY <= 60) {
+       //     navContainer.style.justifyContent = "center";
+       //      GrowNavBar();
+       //  }
 
-        if (this.scrollY < 50) {
-            GrowNavBar();
-        }
+       //  if ((this.scrollY > 60) & (this.scrollY <= startingNavHeight - 70)) {
+       //      navBar.style.width = "100%";
+       //      navContainer.style.flexDirection = "row";
+       //      navContainer.style.flexWrap = "wrap";
+       //  }
+
+       //  if (this.scrollY <= startingNavHeight - 70) {
+       //      belowMark = false;
+       //      navbarToggle.style.top = "-80px";
+       //  }
+
+       //  if (this.scrollY > startingNavHeight - 70) {
+       //      if (belowMark == false) {
+       //          HideNavBar();
+       //          navbarDown = false;
+       //      }
+
+       //      belowMark = true;
+       //      navbarToggle.style.top = "-20px";
+       //  }
+
+       //  // Entering Empty space
+       //  if (this.scrollY < startingNavHeight - 75) {
+       //      ShowNavBar();
+       //      navbarDown = true;
+       //  }
+
+       //  if (this.scrollY < 50) {
+       //      GrowNavBar();
+       //  }
 
         return;
     }
@@ -96,6 +114,17 @@ window.addEventListener("scroll", () => {
 });
 
 navbarToggle.addEventListener("click", () => {
+    if (this.innerWidth <= 974 && this.scrollY == 0) {
+        emptySpace.style.height = startingNavHeight + "px";
+        GrowNavBar();
+        ShowNavBar();
+        navContainer.style.justifyContent = "center";
+        navbarToggle.style.top = "-80px";
+        atTop = true;
+        this.scrollY(0);
+        return;
+    }
+    
     if (navbarDown == true) {
         if (this.innerWidth > 974) {
             emptySpace.style.height = "0px";
