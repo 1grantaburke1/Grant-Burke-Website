@@ -203,16 +203,21 @@
             margin-top: 15px;
       }
       
-      .left_header>div {
+     .left_header>div {
             background: linear-gradient(to right, rgba(175, 191, 255, 0.6), rgba(175, 191, 255, .7));
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             margin-inline: 15px !important;
             width: initial;
+
       }
 
       .cta_button>p {
-            margin-inline: 25px;
+            margin-inline: 10px;
+      }
+
+      .cta_button:nth-of-type(2) {
+            padding-block: 5px;
       }
 
       .cta_button * {
