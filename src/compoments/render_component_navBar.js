@@ -10,7 +10,7 @@ document.write(`
       <!-- <li><a href="./my_story">My Story</a></li> -->
       <li><a href="./work_experience"><i class="fa-solid fa-briefcase"></i> Work Experience</a></li>
       <li><a href="./my_projects"><i class="fa-solid fa-code"></i> My Projects</a></li>
-      <li><a href="./FAQ"><i class="fa-solid fa-circle-question"></i> FAQs</a></li>
+      <li><a href="./FAQs"><i class="fa-solid fa-circle-question"></i> FAQs</a></li>
       <li><a href="./contact_information"><i class="fa-solid fa-phone"></i> Contact Me</a></li>
 </ul>
 </nav>
