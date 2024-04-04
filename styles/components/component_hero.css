@@ -177,6 +177,7 @@
             border-left: none;
 
             padding: 25px 0;
+            padding-top: 35px;
 /*             background: linear-gradient(to right, rgb(90, 90, 90), rgb(25, 25, 25)); */
             background: url("/assets/images/hero_background.png") !important;
             background-size: cover !important;
