@@ -94,6 +94,7 @@ nav {
       transition: color .15s, background-color .15s;
       user-select: none;
       transition: margin .5s;
+      border-radius: 10px;
 }
 
 .shrink_navigation {
@@ -138,7 +139,7 @@ li:active::before {
 }
 
 li:hover::before {
-      transform: translateX(2px);
+      transform: translateX(0px);
 }
 
 li:hover a {
