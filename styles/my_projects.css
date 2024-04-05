@@ -262,6 +262,24 @@ img {
             gap: 0
       }
 
+      .img_carousel {
+            padding-bottom: 15px;
+      }
+
+      .carousel_content:nth-of-type(1) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+      }
+
+      .carousel_content:nth-of-type(1)>a {
+            max-width: 49%;
+      }
+
+      .carousel_content:nth-of-type(1)>a:last-child {
+            max-width: 55% !important;
+      }
+
       .images {
             width: 90vw !important;
             font-size: 1.5em;
