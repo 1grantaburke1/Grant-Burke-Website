@@ -19,13 +19,12 @@
       width: 80%;
       background: linear-gradient(rgb(79, 87, 245), rgb(133, 139, 254));
       padding: 15px;
-      border-radius: 3px;
+      border-radius: 20px;
       border: 1px solid rgb(0, 0, 139);
 }
 
 .work_container>p {
       margin: 0;
-
 }
 
 .work_container>h3 {
@@ -151,6 +150,12 @@ section a:visited {
 
 .v_w {
       background: linear-gradient(rgb(22, 22, 251), rgb(84, 84, 254));
+}
+
+@media screen and (min-width: 0px) and (max-width: 975px) {
+      .work_experience {
+            padding-block: 30px;
+      }
 }
 
 @media (prefers-color-scheme:dark) {
