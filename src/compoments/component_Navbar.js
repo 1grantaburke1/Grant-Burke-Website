@@ -179,6 +179,16 @@ function ShrinkNavBar() {
     if (window.innerWidth > 974) {
         navBar.style.borderBottomLeftRadius = "20px";
         navBar.style.right = "0";
+
+        // mark
+        logo.querySelector("img").style.width = "55px";
+        logo.style.flexDirection = "column";
+        logo.style.fontSize = "12pt";
+        logo.style.gap = "2px";
+        logo.style.paddingRight = "0px";
+        logo.style.margin = "10px 0px 10px 15px";
+        navContainer.style.marginBlock = "16px";
+        // /mark
     } else {
         navBar.style.right = "0vw";
 
@@ -187,6 +197,13 @@ function ShrinkNavBar() {
         navContainer.style.marginRight = "100px";
         navBar.style.alignItems = "start";
         navBar.style.borderBottomLeftRadius = "5px";
+
+        // mark
+        logo.style.fontSize = "16pt";
+        logo.querySelector("img").style.width = "65px";
+        logo.style.paddingRight = "0px";
+        logo.style.margin = "10px 0px 5px 15px";
+        // /mark
     }
 
     if (
@@ -218,6 +235,16 @@ function GrowNavBar() {
     navContainer.style.flexWrap = "wrap";
     navContainer.classList.remove("float_left");
     toggleShown = false;
+
+    // mark
+    logo.querySelector("img").style.width = "90px";
+    logo.style.flexDirection = "row";
+    logo.style.fontSize = "24pt";
+    logo.style.gap = "15px";
+    logo.style.paddingRight = "10px";
+    logo.style.margin = "10px 10px 10px 30px";
+    navContainer.style.marginBlock = "12px";
+    // /mark
 
     links.forEach((link) => {
         link.classList.remove("shrink_navigation");
