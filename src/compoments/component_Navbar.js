@@ -172,7 +172,7 @@ function ShrinkNavBar() {
         link.classList.add("shrink_navigation");
     });
 
-    logo.style.display = "none";
+    //logo.style.display = "none";
     navContainer.style.margin = "5px";
     navBar.style.width = "fit-content";
 
