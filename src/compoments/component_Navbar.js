@@ -203,6 +203,8 @@ function ShrinkNavBar() {
         logo.querySelector("img").style.width = "65px";
         logo.style.paddingRight = "0px";
         logo.style.margin = "10px 0px 5px 15px";
+        logo.style.marginRight = "60px";
+        // /mark
         // /mark
     }
 
