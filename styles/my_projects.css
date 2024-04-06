@@ -245,6 +245,9 @@ img {
 }
 
 @media screen and (min-width: 0px) and (max-width: 975px) {
+      section {
+            padding-block: 30px;
+      }
 
       .hymn_container,
       .register_container,
