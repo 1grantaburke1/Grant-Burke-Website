@@ -239,9 +239,14 @@ function GrowNavBar() {
     logo.style.fontSize = "24pt";
     logo.style.gap = "15px";
     logo.style.paddingRight = "10px";
-    logo.style.margin = "10px 10px 10px 30px";
     navContainer.style.marginBlock = "12px";
     logo.style.setProperty("--left-padding", "25%");
+    
+    if (window.innerWidth > 974) {
+        logo.style.margin = "10px 10px 10px 30px";
+    } else {
+        logo.style.margin = "15px";
+    }
 
     links.forEach((link) => {
         link.classList.remove("shrink_navigation");
