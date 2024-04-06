@@ -172,13 +172,22 @@ function ShrinkNavBar() {
         link.classList.add("shrink_navigation");
     });
 
-    logo.style.display = "none";
+    // logo.style.display = "none";
     navContainer.style.margin = "5px";
     navBar.style.width = "fit-content";
 
     if (window.innerWidth > 974) {
         navBar.style.borderBottomLeftRadius = "20px";
         navBar.style.right = "0";
+
+        logo.querySelector("img").style.width = "55px";
+        logo.style.flexDirection = "column";
+        logo.style.fontSize = "12pt";
+        logo.style.gap = "2px";
+        logo.style.paddingRight = "0px";
+        logo.style.margin = "10px 0px 10px 15px";
+        navContainer.style.marginBlock = "16px";
+        logo.style.setProperty("--left-padding", "10px");
     } else {
         navBar.style.right = "0vw";
 
@@ -187,6 +196,12 @@ function ShrinkNavBar() {
         navContainer.style.marginRight = "100px";
         navBar.style.alignItems = "start";
         navBar.style.borderBottomLeftRadius = "5px";
+
+        logo.style.fontSize = "16pt";
+        logo.querySelector("img").style.width = "65px";
+        logo.style.paddingRight = "0px";
+        logo.style.margin = "10px 0px 5px 15px";
+        logo.style.marginRight = "65px";
     }
 
     if (
@@ -218,6 +233,15 @@ function GrowNavBar() {
     navContainer.style.flexWrap = "wrap";
     navContainer.classList.remove("float_left");
     toggleShown = false;
+
+    logo.querySelector("img").style.width = "90px";
+    logo.style.flexDirection = "row";
+    logo.style.fontSize = "24pt";
+    logo.style.gap = "15px";
+    logo.style.paddingRight = "10px";
+    logo.style.margin = "10px 10px 10px 30px";
+    navContainer.style.marginBlock = "12px";
+    logo.style.setProperty("--left-padding", "25%");
 
     links.forEach((link) => {
         link.classList.remove("shrink_navigation");
