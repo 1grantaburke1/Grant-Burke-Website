@@ -49,7 +49,6 @@ window.addEventListener("scroll", () => {
             emptySpace.style.height = "0px";
             atTop = false;
             navbarDown = false;
-            this.scrollY(0);
         }
 
         if ((emptySpace.style.height = "0px")) {
@@ -121,7 +120,6 @@ navbarToggle.addEventListener("click", () => {
         navContainer.style.justifyContent = "center";
         navbarToggle.style.top = "-80px";
         atTop = true;
-        this.scrollY(0);
         return;
     }
     
