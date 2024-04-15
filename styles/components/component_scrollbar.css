@@ -1,0 +1,57 @@
+:root {
+      --scrollbar-thumb-color: rgb(138, 138, 138);
+}
+
+::-webkit-scrollbar {
+      width: 24px;
+}
+
+::-webkit-scrollbar-track {
+      background: linear-gradient(to bottom, rgb(0, 68, 93), rgb(0, 0, 255), rgb(33, 33, 255), rgb(0, 0, 255), rgb(0, 0, 93) 100%);
+      background-color: rgb(67, 67, 255);
+}
+
+/* ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, rgb(67, 67, 255), rgb(0, 0, 117) 25%, rgb(0, 0, 90) 50%, rgb(0, 0, 117) 75%, rgb(67, 67, 255) 100%);
+      border-radius: 10px;
+      border-inline: 2px solid rgb(28, 77, 255);
+      border-block: 1px solid rgb(21, 255, 75);
+      box-shadow: 0 0 15px black;
+      height: 100px;
+}*/
+
+::-webkit-scrollbar-thumb {
+      cursor: grab;
+      background: linear-gradient(to right, rgb(62, 62, 255), rgb(0, 0, 172), rgb(62, 62, 255));
+      border-radius: 5px;
+      border-inline: 2px solid rgb(138, 138, 138);
+      box-shadow: 0 0 15px rgb(148, 148, 148);
+      height: 100px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+      border-inline: 2px solid rgb(255, 255, 255);
+      border-block: 1px solid rgb(255, 255, 255);
+      box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+
+.scrolling ::-webkit-scrollbar-thumb {
+      border-inline: 2px solid rgb(255, 255, 255);
+      border-block: 1px solid rgb(255, 255, 255);
+      box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+/* ::-webkit-scrollbar-thumb:hover { 
+      cursor: grab;
+      background: linear-gradient(to bottom, rgb(0, 0, 90), rgb(0, 0, 117) 25%, rgb(67, 67, 255) 50%, rgb(0, 0, 117) 75%, rgb(0, 0, 90) 100%);
+      border-inline: 2px solid rgb(28, 77, 255);
+      border-block: 1px solid rgb(21, 255, 75);
+      box-shadow: 0 0 15px black;
+      
+} */
+
+::-webkit-scrollbar-thumb:active {
+      cursor: grabbing;
+}
