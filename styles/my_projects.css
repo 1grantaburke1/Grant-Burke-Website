@@ -3,9 +3,11 @@
 }
 
 .sections {
-
-      display: block;
-      width: fit-content;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding-inline: initial;
+      width: initial;
 }
 
 section:nth-of-type(2) {
@@ -17,16 +19,19 @@ section:nth-of-type(2) {
 .RBC_container {
       display: flex;
       flex-direction: row;
+
       align-items: center;
       width: fit-content;
       gap: 40px;
 }
 
+.sections>div {
+      transform: translateX(0) !important;
+}
+
 .register_container {
       flex-direction: row-reverse;
 }
-
-
 
 hr {
       margin-top: -3px;
