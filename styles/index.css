@@ -79,7 +79,15 @@ section:nth-of-type(even) {
       word-break: keep-all;
       border-radius: 5px;
       margin: 5px;
-      background: linear-gradient(135deg, rgb(78, 122, 255), blue);
+
+      /*    Old Colors    */
+            /* border: 2px solid white;
+            background: linear-gradient(135deg, rgb(78, 122, 255), blue); */
+      
+      /*    New Colors    */
+      border: none;
+      background: linear-gradient(135deg, rgba(78, 122, 255, .6), rgba(0, 0, 255, 0.6));
+      
       color: white;
       border: 2px solid white;
 }
