@@ -11,8 +11,8 @@
       background: rgb(241, 241, 241);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 100vw;
-      height: 70vh;
+      width: 100%;
+      height: fit-content;
       z-index: 0;
       color: white;
 
