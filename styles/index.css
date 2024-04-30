@@ -89,7 +89,6 @@ section:nth-of-type(even) {
       background: linear-gradient(135deg, rgba(78, 122, 255, .6), rgba(0, 0, 255, 0.6));
       
       color: white;
-      border: 2px solid white;
 }
 
 .img_para_wrapper a {
