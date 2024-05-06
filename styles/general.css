@@ -118,11 +118,13 @@ section:first-child {
 }
 
 @media screen and (max-width: 980px) {
-      .header{
-            padding-top: 20px;
-      }
-      
       .header>hr {
             margin: 0 30px;
+      }
+}
+
+@media screen and (min-width:0px) and (max-width:862px) {
+      .header {
+            padding-top: 20px;
       }
 }
