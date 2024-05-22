@@ -244,6 +244,8 @@ function GrowNavBar() {
         logo.style.margin = "10px 10px 10px 30px";
     } else {
         logo.style.margin = "15px";
+        logo.style.marginBottom = "10px";
+        navContainer.style.margin = "0px 5px";
     }
 
     links.forEach((link) => {
