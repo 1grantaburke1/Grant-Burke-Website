@@ -156,6 +156,7 @@ section:nth-of-type(even) {
 }
 
 .references .column {
+      color: rgb(78, 78, 78);
       background-color: rgba(255, 255, 255, .35);
       width: calc(var(--basic-reference-width));
 }
@@ -524,7 +525,7 @@ section+section {
       }
 
       .column {
-            color: white;
+            color: white !important;
       }
 
       .column:hover {
