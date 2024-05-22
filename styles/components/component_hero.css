@@ -198,7 +198,8 @@
       }
 
       .left_header :is(h1, li) {
-            color: rgb(3, 0, 40);
+/*             color: rgb(3, 0, 40); */
+            color: white;
             text-shadow: none !important;
             margin-top: 0;
       }
@@ -217,7 +218,8 @@
       }
       
      .left_header>div {
-            background: linear-gradient(to right, rgba(175, 191, 255, 0.6), rgba(175, 191, 255, .7));
+/*             background: linear-gradient(to right, rgba(175, 191, 255, 0.6), rgba(175, 191, 255, .7)); */
+            background: linear-gradient(to right, rgba(0, 98, 131, 0.8), rgba(175, 191, 255, .7));
             padding: 15px;
             border-radius: 10px;
             margin-inline: 15px !important;
