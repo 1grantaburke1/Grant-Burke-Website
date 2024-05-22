@@ -245,12 +245,13 @@ a {
       .logo {
             /* display: block; */
             margin: 15px;
+            margin-bottom: 10px;
             border-radius: 0px;
             transition: initial;
       }
 
       .navigation {
-            margin: 10px 5px;
+            margin: 0px 5px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
