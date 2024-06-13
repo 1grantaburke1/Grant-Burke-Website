@@ -63,9 +63,23 @@ navbarToggle.addEventListener("click", () => {
     if (window.innerWidth <= 974) {
         if (navbarDown == true) {
             HideNavBar();
+
+            navbarToggle.style.top = "-35px";
+            setTimeout(() => {
+                ShowNavBarToggle();
+
+                toggleArrowIcon.textContent = "\u2193";
+            }, 150);
             navbarDown = false;
         } else {
             ShowNavBar();
+
+            navbarToggle.style.top = "-1px";
+            setTimeout(() => {
+                ShowNavBarToggle();
+                toggleArrowIcon.textContent = "\u2191";
+                emptySpace.style.height = startingNavHeight - 10 + "px";
+            }, 150);
             navbarDown = true;
         }
     } else {
