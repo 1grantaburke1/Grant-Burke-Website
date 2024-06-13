@@ -10,171 +10,108 @@ let toggleArrowIcon = document.querySelector(".toggle_nav > p");
 let toggleHamburgerIcon = document.querySelector(".hamburger_btn");
 
 let logoImg = document.querySelector("nav img");
-logoImg.setAttribute("src", "./assets/images/GB_blue_logo.jpg");
+logoImg.setAttribute("src", "./assets/images/sample icons/GB_blue_logo.jpg");
 
 // Determine navbarToggle btn's icon based on width
 if (window.innerWidth <= 974) {
     toggleArrowIcon.style.display = "none";
     toggleHamburgerIcon.style.display = "block";
-} else {
-    toggleArrowIcon.style.display = "block";
-    toggleHamburgerIcon.style.display = "none";
+    ShrinkNavBar();
 }
 
-//Empty space at the top of screen.
 let emptySpace = document.querySelector(".empty");
-let startingNavHeight = navBar.offsetHeight;
-// emptySpace.style.height = startingNavHeight + 10 + "px";
+//Empty space at the top of screen.
+if (window.innerWidth > 974) {
+    setTimeout(() => {
+        startingNavHeight = navBar.offsetHeight;
+        emptySpace.style.height = startingNavHeight + "px";
+    }, 100);
 
-setTimeout(() => {
-    startingNavHeight = navBar.offsetHeight;
-    emptySpace.style.height = startingNavHeight + "px";
-}, 700);
-
-navBar.style.width = "100vw";
+    toggleArrowIcon.style.display = "block";
+    toggleHamburgerIcon.style.display = "none";
+    navBar.style.width = "100vw";
+}
 
 let toggleShown = false;
 let navbarDown = true;
-// let belowMark = false;
+if (window.innerWidth <= 974) {
+    navbarDown = false;
+}
 let atTop = true;
 window.addEventListener("scroll", () => {
     // Mobile Widths
-    if (this.innerWidth <= 974) {
-        //new way
-        if (this.scrollY > 0 && atTop == true) {
-            navContainer.style.justifyContent = "initial";
-            // emptySpace.style.height = "0px";
-            ShrinkNavBar();
-            HideNavBar();
+    if (this.innerWidth > 974) {
+        //Desktop Widths
+        if (this.scrollY > 0) {
             emptySpace.style.height = "0px";
-            atTop = false;
-            navbarDown = false;
+            ShrinkNavBar();
+            ShowNavBarToggle();
         }
 
-        if ((emptySpace.style.height = "0px")) {
-            navbarToggle.style.top = "-20px";
+        if (this.scrollY == 0) {
+            GrowNavBar();
+
+            if (navbarDown == true) {
+                HideNavBarToggle();
+            }
+            return;
         }
-
-        //old way
-        // Exiting Empty space
-       // if (this.scrollY > 60) {
-       //     navContainer.style.justifyContent = "initial";
-       //      ShrinkNavBar();
-       //  } else if (this.scrollY <= 60) {
-       //     navContainer.style.justifyContent = "center";
-       //      GrowNavBar();
-       //  }
-
-       //  if ((this.scrollY > 60) & (this.scrollY <= startingNavHeight - 70)) {
-       //      navBar.style.width = "100%";
-       //      navContainer.style.flexDirection = "row";
-       //      navContainer.style.flexWrap = "wrap";
-       //  }
-
-       //  if (this.scrollY <= startingNavHeight - 70) {
-       //      belowMark = false;
-       //      navbarToggle.style.top = "-80px";
-       //  }
-
-       //  if (this.scrollY > startingNavHeight - 70) {
-       //      if (belowMark == false) {
-       //          HideNavBar();
-       //          navbarDown = false;
-       //      }
-
-       //      belowMark = true;
-       //      navbarToggle.style.top = "-20px";
-       //  }
-
-       //  // Entering Empty space
-       //  if (this.scrollY < startingNavHeight - 75) {
-       //      ShowNavBar();
-       //      navbarDown = true;
-       //  }
-
-       //  if (this.scrollY < 50) {
-       //      GrowNavBar();
-       //  }
-
-        return;
     }
-
-    //Desktop Widths
-    if (this.scrollY > 0) {
-        emptySpace.style.height = "0px";
-    }
-
-    if (this.scrollY == 0) {
-        GrowNavBar();
-        return;
-    }
-
-    ShrinkNavBar();
 });
 
 navbarToggle.addEventListener("click", () => {
-    if (this.innerWidth <= 974 && this.scrollY == 0) {
-        emptySpace.style.height = startingNavHeight + "px";
-        GrowNavBar();
-        ShowNavBar();
-        navContainer.style.justifyContent = "center";
-        navbarToggle.style.top = "-80px";
-        atTop = true;
-        return;
-    }
-    
-    if (navbarDown == true) {
-        if (this.innerWidth > 974) {
-            emptySpace.style.height = "0px";
+    if (window.innerWidth <= 974) {
+        if (navbarDown == true) {
+            HideNavBar();
+            navbarDown = false;
+        } else {
+            ShowNavBar();
+            navbarDown = true;
         }
+    } else {
+        if (navbarDown == true) {
+            emptySpace.style.height = "0px";
+            HideNavBar();
 
-        HideNavBar();
+            navbarToggle.style.top = "-35px";
+            setTimeout(() => {
+                ShowNavBarToggle();
 
-        navbarToggle.style.top = "-35px";
-        setTimeout(() => {
-            navbarToggle.style.top = "-20px";
+                toggleArrowIcon.textContent = "\u2193";
+            }, 150);
+            navbarDown = false;
+        } else {
+            ShowNavBar();
 
-            toggleArrowIcon.textContent = "\u2193";
-        }, 150);
-        navbarDown = false;
-        return;
+            navbarToggle.style.top = "-1px";
+            setTimeout(() => {
+                if (window.scrollY > 0) {
+                    ShowNavBarToggle();
+                    toggleArrowIcon.textContent = "\u2191";
+                    emptySpace.style.height = startingNavHeight - 10 + "px";
+                }
+            }, 150);
+            navbarDown = true;
+            if (window.scrollY == 0) {
+                HideNavBarToggle();
+                emptySpace.style.height = startingNavHeight - 10 + "px";
+            }
+        }
     }
-
-    if (this.innerWidth > 974) {
-        emptySpace.style.height = startingNavHeight + "px";
-    }
-    ShowNavBar();
-
-    if (window.scrollY == 0) {
-        navbarToggle.style.top = "-80px";
-        toggleArrowIcon.textContent = "\u2191";
-        navbarDown = true;
-        return;
-    }
-
-    navbarToggle.style.top = "-1px";
-    setTimeout(() => {
-        navbarToggle.style.top = "-20px";
-        toggleArrowIcon.textContent = "\u2191";
-    }, 150);
-    navbarDown = true;
 });
 
 function ShrinkNavBar() {
-    if (toggleShown == false) {
-        navbarToggle.style.top = "-20px";
-        toggleShown = true;
-    }
-
     links.forEach((link) => {
         link.classList.add("shrink_navigation");
     });
 
-    // logo.style.display = "none";
     navContainer.style.margin = "5px";
     navBar.style.width = "fit-content";
 
     if (window.innerWidth > 974) {
+        //navbarToggle.style.top = "-20px";
+        toggleShown = true;
+
         navBar.style.borderBottomLeftRadius = "20px";
         navBar.style.right = "0";
 
@@ -187,6 +124,8 @@ function ShrinkNavBar() {
         navContainer.style.marginBlock = "16px";
         logo.style.setProperty("--left-padding", "10px");
     } else {
+        ShowNavBarToggle();
+
         navBar.style.right = "0vw";
 
         navContainer.style.display = "flex";
@@ -218,9 +157,9 @@ function ShrinkNavBar() {
 function GrowNavBar() {
     if (navbarDown == true) {
         emptySpace.style.height = startingNavHeight + "px";
-        navbarToggle.style.top = "-80px";
+        HideNavBarToggle();
     }
-    
+
     logo.style.display = "flex";
     navBar.style.width = "100vw";
     navBar.style.border = "none";
@@ -239,7 +178,7 @@ function GrowNavBar() {
     logo.style.paddingRight = "10px";
     navContainer.style.marginBlock = "12px";
     logo.style.setProperty("--left-padding", "25%");
-    
+
     if (window.innerWidth > 974) {
         logo.style.margin = "10px 10px 10px 30px";
     } else {
@@ -262,5 +201,13 @@ function ShowNavBar() {
 }
 
 function HideNavBar() {
-    navBar.style.top = "-300px";
+    navBar.style.top = "-310px";
+}
+
+function ShowNavBarToggle() {
+    navbarToggle.style.top = "-20px";
+}
+
+function HideNavBarToggle() {
+    navbarToggle.style.top = "-80px";
 }
