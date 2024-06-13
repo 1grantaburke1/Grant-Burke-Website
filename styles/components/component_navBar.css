@@ -240,6 +240,7 @@ a {
             flex-direction: column;
             height: fit-content;
             align-items: center;
+            top: -310px;
       }
 
       .logo {
